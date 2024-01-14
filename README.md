@@ -25,7 +25,8 @@ vector cross products
         page on uninstallation
 
 
-
+## Compilation
+    gfortran -o xp main.f90
 
 
 
