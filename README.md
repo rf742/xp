@@ -5,7 +5,7 @@ vector cross products
 
 ## To Do
 
-- [ ] Functionality
+### Functionality
 -   [x] Take 6 args and spit back the cross product of two 3 vectors
 -   [x] Take 4 args and spit back cross product (assuming z1 = z2 = 0)
 -   [ ] Break down creation of cross product and taking of command line 
@@ -13,7 +13,7 @@ vector cross products
 -   [ ] Each vector represented as a 3 component array of doubles
 -   [ ] Create a vector type for data and method
 -   [ ] Create an interactive mode
-- [ ] Documentation, compilation, etc.
+### Documentation, compilation, etc.
 -   [ ] make a usage string
 -   [ ] make useful error codes on exit
 -   [ ] Create makefile for basic compilation
