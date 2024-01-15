@@ -1,11 +1,11 @@
 program cross_product
-
+  use :: xplib
   implicit none
   integer :: count
   character(len=32) :: arg
   character(len=32) :: x1, y1, z1, x2, y2, z2
   real :: x1f, y1f, z1f, x2f, y2f, z2f
-  real :: cross_x, cross_y, cross_z
+  real, dimension(3) :: crp
   count = command_argument_count()
   if (count==6) then
           call get_command_argument(1, x1)
@@ -42,12 +42,10 @@ program cross_product
   ! Read the vector components from the command line
 
   ! Calculate the cross product
-  cross_x = y1f * z2f - z1f * y2f
-  cross_y = z1f * x2f - x1f * z2f
-  cross_z = x1f * y2f - y1f * x2f
+  crp = crossproduct(x1f,y1f,z1f,x2f,y2f,z2f)
 
   ! Print the result
-  print *, "The cross product is:", cross_x, cross_y, cross_z
+  print *, "The cross product is:", crp(1), crp(2), crp(3)
 
 end program cross_product
 
