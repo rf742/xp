@@ -1,6 +1,8 @@
 module xplib
 contains
   function crossproduct(x1,y1,z1,x2,y2,z2) result(r)
+          !! Function to get cross product, given the components of two
+          !! Vectors in \(R^3\)
           real, intent(in)   :: x1,y1,z1,x2,y2,z2
           real, dimension(3) :: r
           real              :: crx, cry, crz
