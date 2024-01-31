@@ -2,7 +2,6 @@ program cross_product
   use :: xplib
   implicit none
   integer :: count
-  character(len=32) :: arg
   character(len=32) :: x1, y1, z1, x2, y2, z2
   real :: x1f, y1f, z1f, x2f, y2f, z2f
   real, dimension(3) :: crp

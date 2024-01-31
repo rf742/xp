@@ -1,9 +1,25 @@
-a.out: xplib.o main.f90
-	gfortran main.f90 xplib.o
-.PHONY: clean
+FC = gfortran
+FFlags = -Wall
+
+OBJS = bin/xplib.o bin/main.o
+EXE = bin/a.out
+
+SRCDIR = src
+BINDIR = bin
+
+all: $(EXE)
+
+$(EXE): $(OBJS)
+	$(FC) $(FFlags) -o $@ $^
+
+bin/xplib.o: $(SRCDIR)/xplib.f90
+	$(FC) $(FFlags) -c $< -o $@ 
+
+bin/main.o: $(SRCDIR)/main.f90
+	$(FC) $(FFlags) -c $< -o $@
+
 clean:
-	rm *.o *.mod
+	rm -f $(OBJS) xplib.mod
 
-
-xplib.o: xplib.f90
-	gfortran -c xplib.f90
+distclean: clean
+	rm -f $(EXE)
