@@ -1,14 +1,14 @@
 module xplib
 contains
-  function crossproduct(x1, y1, z1, x2, y2, z2) result(r)
+  function crossproduct(va, vb) result(r)
           !! Function to get cross product, given the components of two
           !! Vectors in \(R^3\)
-    real, intent(in)   :: x1, y1, z1, x2, y2, z2
+    real, dimension(3), intent(in)   :: va, vb
     real, dimension(3) :: r
     real              :: crx, cry, crz
-    crx = y1*z2 - z1*y2
-    cry = z1*x2 - x1*z2
-    crz = x1*y2 - y1*x2
+    crx = va(2)*vb(3) - va(3)*vb(2)
+    cry = va(3)*vb(1) - va(1)*vb(3)
+    crz = va(1)*vb(2) - va(2)*vb(1)
     r = (/crx, cry, crz/)
   end function
 end module
