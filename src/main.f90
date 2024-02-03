@@ -37,9 +37,6 @@ program cross_product
     stop 1
   end if
 
-  print *, count
-  ! Read the vector components from the command line
-
   ! Calculate the cross product
   crp = crossproduct(va, vb)
 
