@@ -24,3 +24,7 @@ clean:
 
 distclean: clean
 	rm -f $(EXE)
+
+.PHONY: doc
+doc:
+	ford -d . -o doc my_project.md
