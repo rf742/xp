@@ -34,6 +34,16 @@ program cross_product
 
   else
     print *, "Invalid number of arguments. Exiting!"
+    print *, "Usage: ./a.out 1 2 [3] 4 5 [6]"
+    print *, "Arguments: "
+    print *, "    1: A_x"
+    print *, "    2: A_y"
+    print *, "    3: A_z"
+    print *, "    4: B_x"
+    print *, "    5: B_y"
+    print *, "    6: B_z"
+    print *, "The cross product of the above 2 vectors will be returned"
+    print *, "If only 4 arguments are given A_z and B_z assumed to be 0"
     stop 1
   end if
 
